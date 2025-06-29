@@ -1,0 +1,402 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - BriqNature</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="static/images/Logo remove background.png" alt="Logo Ekspor Indonesia">
+                <span>BriqNature</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}">Beranda</a></li>
+                <li><a href="index.html#services">Layanan</a></li>
+                <li><a href="about.html" class="active">Tentang Kami</a></li>
+                <li><a href="index.html#products">Produk</a></li>
+                <li><a href="index.html#testimonials">Testimoni</a></li>
+                <li><a href="index.html#contact">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="about-hero">
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+            <h1>Tentang Kami</h1>
+            <div class="breadcrumb">
+                <a href="{{ url_for('home') }}">Beranda</a> / <span>Tentang Kami</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT INTRO -->
+    <section class="about-intro">
+        <div class="container">
+            <div class="about-intro-grid">
+                <div class="about-intro-image">
+                    <img src="static/images/bck1.jpeg" alt="Tentang BriqNature">
+                </div>
+                <div class="about-intro-content">
+                    <h2>Kami adalah <span class="highlight">BriqNature</span></h2>
+                    <p class="lead">Bersama BRIQNATURE, mari kita wujudkan langkah kecil untuk perubahan besar.</p>
+                    <p>BriqNature lahir dari semangat untuk mengurangi dampak negatif terhadap alam dengan memanfaatkan sumber daya terbarukan yang melimpah. Briket kami diproduksi dari bahan-bahan alami berkualitas tinggi, seperti serbuk kayu, sekam padi, dan limbah organik lainnya, yang diolah dengan teknologi modern untuk menghasilkan produk yang hemat energi dan rendah emisi.</p>
+                    <p>Kami tidak hanya menjual briket; kami menjual gaya hidup yang bertanggung jawab. Setiap produk BriqNature adalah wujud nyata dedikasi kami dalam menjaga kelestarian alam, tanpa mengorbankan kenyamanan dan kebutuhan sehari-hari Anda.</p>
+                    
+                    <div class="signature">
+                        <img src="static/images/signature.png" alt="Tanda tangan CEO">
+                        <div class="signature-info">
+                            <h4>Rafly Alfiansyah</h4>
+                            <p>Founder & CEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR MISSION -->
+    <section class="our-mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Misi Kami</h3>
+                    <p>Menghasilkan arang briket premium dari bahan terbarukan dengan proses produksi rendah karbon sambil memberdayakan komunitas lokal.</p>
+                </div>
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Visi Kami</h3>
+                    <p>Menjadi pemimpin industri arang briket berkelanjutan yang menyediakan alternatif bahan bakar ramah lingkungan berkualitas tinggi.</p>
+                </div>
+                <div class="mission-item">
+                    <div class="mission-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Nilai Kami</h3>
+                    <p>BriqNature berdiri pada prinsip keberlanjutan, inovasi, kualitas, integritas, dan tanggung jawab lingkungan dalam setiap aspek bisnis kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Kami</h2>
+                <p>Beberapa alasan mengapa kami menjadi mitra ekspor terpercaya</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Inovasi</h3>
+                        <p>Penelitian dan pengembangan terus-menerus untuk kualitas terbaik.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Superior</h3>
+                        <p>Tahan 2-3 kali lebih lama dibanding arang konvensional.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-brands fa-free-code-camp"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Bebas Asap & Bau</h3>
+                        <p>Pembakaran bersih tanpa asap berlebih dan bau tidak sedap.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Konsisten</h3>
+                        <p>Suhu pembakaran stabil dan merata untuk hasil masakan optimal.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Diproses Secara Etis</h3>
+                        <p>Memberdayakan petani dan komunitas lokal melalui praktik pengadaan adil.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Keberlanjutan Terjamin</h3>
+                        <p>Diproduksi dari bahan terbarukan dengan jejak karbon minimal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR TEAM -->
+    <section class="our-team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tim Kami</h2>
+                <p>Bertemu dengan para profesional di balik kesuksesan BriqNature</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="static/images/rafly_Image.jpg" alt="Budi Santoso">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Rafly Alfiansyah</h3>
+                        <p>Founder & CEO</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="static/images/malif-Image.jpeg" alt="Dewi Putri">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Muhammad Alif Hidayah</h3>
+                        <p>Chief Operating Officer</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <img src="static/images/wisma_Image.jpg" alt="Hendra Wijaya">
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Wisma Jaya Laksana</h3>
+                        <p>Export Manager</p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER -->
+    <section class="stats-counter">
+        <div class="stats-overlay"></div>
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="500">500+</div>
+                    <div class="stat-title">Klien UMKM</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class="stat-number" data-count="30">30+</div>
+                    <div class="stat-title">Negara Tujuan</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="stat-number" data-count="1500">1500+</div>
+                    <div class="stat-title">Pengiriman Sukses</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number" data-count="98">98%</div>
+                    <div class="stat-title">Klien Puas</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pertanyaan Umum</h2>
+                <p>Temukan jawaban untuk pertanyaan yang sering diajukan tentang layanan ekspor kami</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apa itu BriqNature dan bagaimana briket ini berbeda dengan briket lainnya</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>BriqNature adalah brand briket premium yang terbuat dari bahan-bahan alami dan organik. Kami membedakan diri dengan menggunakan teknologi pemadatan tinggi yang menghasilkan briket dengan waktu bakar lebih lama, panas yang stabil, dan asap minimal. Semua briket kami dibuat dari limbah pertanian dan kehutanan yang dikelola secara berkelanjutan, sehingga tidak merusak lingkungan seperti briket konvensional.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Berapa lama waktu bakar briket BriqNature?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Briket BriqNature dirancang untuk memberikan waktu bakar yang optimal. Untuk ukuran standar, briket kami dapat bertahan 3-4 jam dengan panas yang konsisten. Varian premium BriqNature Gold dapat bertahan hingga 5-6 jam, menjadikannya ideal untuk acara BBQ atau penggunaan jangka panjang. Waktu bakar dapat bervariasi tergantung pada kondisi penggunaan dan sirkulasi udara.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah briket BriqNature aman untuk memasak makanan?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu! BriqNature sangat aman untuk memasak segala jenis makanan. Briket kami bebas dari bahan kimia berbahaya, pewarna, dan pengikat sintetis yang sering ditemukan pada briket konvensional. Semua briket kami tersertifikasi food-grade dan menghasilkan asap minimal, sehingga tidak mempengaruhi rasa alami makanan Anda. Dengan BriqNature, Anda dapat menikmati pengalaman memasak yang lebih sehat.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara terbaik menyalakan briket BriqNature?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Untuk hasil optimal, susun briket BriqNature dalam formasi piramida kecil. Gunakan pemantik briket atau kertas koran di bagian bawah formasi. Nyalakan dan biarkan api menyebar selama 15-20 menit hingga briket tertutup abu putih tipis di bagian luarnya. Kemudian, susun briket sesuai kebutuhan Anda. BriqNature dirancang dengan teknologi penyalaan cepat, sehingga lebih mudah menyala dibandingkan briket konvensional.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah BriqNature tersedia dalam kemasan dan ukuran berbeda?</h3>
+                        <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, BriqNature tersedia dalam beberapa pilihan kemasan dan ukuran untuk memenuhi kebutuhan berbagai konsumen. Kami menawarkan kemasan ekonomis 2kg dan 5kg untuk penggunaan rumah tangga, serta kemasan bulk 10kg untuk restoran atau acara besar. Selain itu, kami memiliki varian BriqNature Standard untuk penggunaan umum, BriqNature Gold untuk pembakaran ekstra lama, dan BriqNature Quick-Light untuk penyalaan instan dalam 5 menit. Semua produk kami dapat dibeli di toko-toko retail terpilih atau melalui website resmi kami.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Siap Untuk Memasuki Pasar Global?</h2>
+                <p>Hubungi kami sekarang untuk konsultasi gratis dan mulai perluas bisnis Anda ke pasar internasional</p>
+                <a href="#" class="cta-button">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">BRIQNATURE</div>
+                <p>Membantu UMKM Indonesia go global dengan layanan ekspor terpadu yang mudah, aman, dan terpercaya.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="index.html#services">Layanan</a></li>
+                    <li><a href="about.html">Tentang Kami</a></li>
+                    <li><a href="index.html#products">Produk</a></li>
+                    <li><a href="index.html#testimonials">Testimoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Layanan</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Konsultasi Ekspor</a></li>
+                    <li><a href="#">Pengurusan Dokumen</a></li>
+                    <li><a href="#">Pengiriman Internasional</a></li>
+                    <li><a href="#">Pelatihan Ekspor</a></li>
+                    <li><a href="#">Riset Pasar</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Bantuan</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="index.html#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ current_year }} BriqNature. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Contact Us</span>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+</body>
+</html>

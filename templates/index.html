@@ -1,0 +1,270 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BriqNature</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="static/images/Logo remove background.png" alt="Logo Ekspor Indonesia">
+                <span>BriqNature</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('home') }}" class="active">Beranda</a></li>
+                <li><a href="#services">Layanan</a></li>
+                <li><a href="{{ url_for('about') }}">Tentang Kami</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <h1>BriqNature - Solusi Briket Berkualitas untuk Setiap Momen</h1>
+        <p>Kenalkan BriqNature, Briket Nyaman, Murah, Ramah Lingkungan untuk Pengalaman Membakar yang Lebih Baik.</p>
+        <a href="https://linktr.ee/briqnature" class="cta-button">Mulai Sekarang</a>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Siap Melayani</h2>
+            <p>Kami siap melayani permintaan anda baik dari kualitas lokal hinggal kualitas ekspor.</p>
+        </div>
+        <div class="services-grid">
+            {% for service in services %}
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="{{ service.image }}" alt="{{ service.title }}">
+                </div>
+                <div class="service-content">
+                    <h3>{{ service.title }}</h3>
+                    <p>{{ service.description }}</p>
+                    <a href="#" class="read-more">Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-img">
+                <img src="static/images/bck1.jpeg" alt="Tentang Ekspor Indonesia">
+            </div>
+            <div class="about-text">
+                <h2>Tentang Kami</h2>
+                <p>BriqNature lahir dari semangat untuk mengurangi dampak negatif terhadap alam dengan memanfaatkan sumber daya terbarukan yang melimpah. Briket kami diproduksi dari bahan-bahan alami berkualitas tinggi, seperti serbuk kayu, sekam padi, dan limbah organik lainnya, yang diolah dengan teknologi modern untuk menghasilkan produk yang hemat energi dan rendah emisi.</p>
+                <p>Kami tidak hanya menjual briket; kami menjual gaya hidup yang bertanggung jawab. Setiap produk BriqNature adalah wujud nyata dedikasi kami dalam menjaga kelestarian alam, tanpa mengorbankan kenyamanan dan kebutuhan sehari-hari Anda.</p>
+                <p>Bersama BriqNature, mari kita wujudkan langkah kecil untuk perubahan besar. Karena kami yakin, energi bersih hari ini adalah warisan terbaik untuk generasi mendatang.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">53</div>
+                        <div class="stat-title">Klien</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-title">Negara Tujuan</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-title">Klien Puas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>Produk Unggulan</h2>
+            <p>Berbagai produk berkualitas dari BriqNature yang telah berhasil menembus pasar internasional</p>
+        </div>
+        <div class="products-grid">
+            {% for product in products %}
+            <div class="product-card">
+                <div class="product-img">
+                    <img src="{{ product.image }}" alt="{{ product.title }}">
+                    {% if product.tag %}
+                    <div class="product-tag">{{ product.tag }}</div>
+                    {% endif %}
+                </div>
+                <div class="product-content">
+                    <h3>{{ product.title }}</h3>
+                    <p>{{ product.description }}</p>
+                    <div class="product-price">{{ product.price }}</div>
+                    <div class="product-action">
+                        <a href="#" class="btn-detail">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-title">
+            <h2>Testimoni Klien</h2>
+            <p>Apa kata klien kami tentang layanan ekspor yang kami berikan</p>
+        </div>
+        <div class="testimonial-slider">
+            <div class="testimonial-wrapper">
+                {% for testimonial in testimonials %}
+                <div class="testimonial">
+                    <div class="testimonial-img">
+                        <img src="{{ testimonial.image }}" alt="{{ testimonial.name }}">
+                    </div>
+                    <p>"{{ testimonial.message }}"</p>
+                    <div class="testimonial-name">{{ testimonial.name }}</div>
+                    <div class="testimonial-position">{{ testimonial.position }}</div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="slider-nav">
+                {% for testimonial in testimonials %}
+                <div class="slider-dot {% if loop.first %}active{% endif %}"></div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="section-title">
+            <h2>Hubungi Kami</h2>
+            <p>Jangan ragu untuk menghubungi kami jika Anda memiliki pertanyaan atau ingin konsultasi</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <h4>Alamat</h4>
+                        <p>Jl. Meruya No. 123, Jakarta Barat, Indonesia 12345</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <h4>Telepon</h4>
+                        <p>+62 895-3655-21914</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-text">
+                        <h4>Email</h4>
+                        <p>briqnature@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div class="contact-text">
+                        <h4>Jam Operasional</h4>
+                        <p>Senin - Minggu: 08.00 - 20.00 WIB</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm" method="post" action="{{ url_for('contact') }}">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Nomor Telepon</label>
+                        <input type="tel" id="phone" name="phone" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subjek</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">Briq Nature</div>
+                <p>BriqNature – Panas Maksimal, Bersih, dan Ramah Lingkungan.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/briqnature?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==s" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@briqnature_" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/62895365521914" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Link Cepat</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Layanan</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Produk Lokal</a></li>
+                    <li><a href="#">Produk Ekspor</a></li>
+                    <li><a href="#">Request Produk</a></li>
+                    <li><a href="#">Internasional Shipping</a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-links-container">
+                <h3 class="footer-title">Bantuan</h3>
+                <ul class="footer-links">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {{ current_year }} BriqNature. Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>Contact Us</span>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
