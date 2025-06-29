@@ -94,28 +94,6 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan aplikasi ini di l
 
     Aplikasi akan berjalan di `http://127.0.0.1:5000/`. Buka URL ini di browser web Anda.
 
-## Struktur Direktori
-BriqNature/
-├── app.py                  # File utama aplikasi Flask
-├── requirements.txt        # Daftar dependensi Python
-├── templates/              # Direktori untuk file HTML (template Jinja2)
-│   ├── index.html
-│   ├── about.html
-│   └── contact.html
-└── static/                 # Direktori untuk aset statis (CSS, JS, Gambar)
-├── css/                # File CSS Anda (misal: style.css)
-├── js/                 # File JavaScript Anda (jika ada)
-└── images/             # Gambar-gambar yang digunakan di website
-├── Briq 1.jpeg
-├── Gallery-4-1024x576.jpg
-├── Product-5-1-300x300.jpg
-├── Product-11-1-300x300.jpg
-├── Product-8-1-300x300.jpg
-├── Product-9-1-300x300.jpg
-├── Our-Team5.jpeg
-├── Our-Team6.jpg
-└── client3.jpg
-
 ## Tentang Saya
 
 Muhammad Alif Hidayah
